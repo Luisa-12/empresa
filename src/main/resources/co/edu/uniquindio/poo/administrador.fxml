@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane prefHeight="575.0" prefWidth="1210.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.ReservaViewController">
+    <tabs>
+
+        <Tab text="Clientes">
+   <content>
+               <AnchorPane>
+                   <children>
+                       <Label layoutX="102.0" layoutY="22.0" text="Gestión de Clientes">
+                           <font>
+                               <Font name="System Bold" size="18.0" />
+                           </font>
+                       </Label>
+   
+                       <TextField fx:id="txt_Cedula" layoutX="102.0" layoutY="60.0" prefHeight="31.0" prefWidth="154.0" promptText="Cédula Cliente" />
+                       <TextField fx:id="txt_Nombre" layoutX="256.0" layoutY="60.0" prefHeight="31.0" prefWidth="154.0" promptText="Nombre Cliente" />
+                       <TextField fx:id="txt_Telefono" layoutX="410.0" layoutY="60.0" promptText="Teléfono Cliente" />
+                       <TextField fx:id="txt_Correo" layoutX="597.0" layoutY="60.0" promptText="Correo Cliente" />
+   
+                       <Button fx:id="btn_CrearCliente" layoutX="788.0" layoutY="60.0" mnemonicParsing="false" onAction="#agregarCliente" style="-fx-background-color: #3d8b3d;" text="Crear Cliente" textFill="WHITE" />
+                       <Button fx:id="btn_ActualizarCliente" layoutX="899.0" layoutY="60.0" mnemonicParsing="false" onAction="#actualizarCliente" style="-fx-background-color: #3d8b3d;" text="Actualizar Cliente" textFill="WHITE" />
+                       <Button fx:id="btn_EliminarCliente" layoutX="657.0" layoutY="465.0" mnemonicParsing="false" onAction="#eliminarCliente" prefHeight="31.0" prefWidth="131.0" style="-fx-background-color: #3d8b3d;" text="Eliminar Cliente" textFill="#fffdfd" />
+   
+                       <TableView fx:id="tbl_ListClientes" layoutX="102.0" layoutY="144.0" prefHeight="270.0" prefWidth="923.0">
+                           <columns>
+                               <TableColumn fx:id="tbc_CedulaCliente" prefWidth="206.0" text="Cédula" />
+                               <TableColumn fx:id="tbc_NombreCliente" prefWidth="179.0" text="Nombre" />
+                               <TableColumn fx:id="tbc_TelefonoCliente" prefWidth="239.0" text="Teléfono" />
+                               <TableColumn fx:id="tbc_CorreoCliente" prefWidth="298.0" text="Correo" />
+                           </columns>
+                       </TableView>
+                  <Button fx:id="btn_LimpiarClientes" layoutX="410.0" layoutY="465.0" mnemonicParsing="false" onAction="#LimpiarClientes" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #3d8b3d;" text="Limpiar" textFill="WHITE" />
+                  <ImageView fitHeight="147.0" fitWidth="159.0" layoutX="1034.0" layoutY="28.0">
+                     <image>
+                        <Image url="@../../../../../../../../../../Downloads/uniq.jpeg" />
+                     </image>
+                  </ImageView>
+                   </children>
+               </AnchorPane>
+   </content>
+        </Tab>
+      <Tab text="Vehiculos">
+         <content>
+            <AnchorPane prefHeight="536.0" prefWidth="1047.0">
+               <children>
+                  <Label layoutX="20.0" layoutY="20.0" text="Gestión de vehiculos">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_Cedula1" layoutX="20.0" layoutY="60.0" prefHeight="31.0" prefWidth="120.0" promptText="Placa" />
+                  <TextField fx:id="txt_Nombre1" layoutX="136.0" layoutY="60.0" prefHeight="31.0" prefWidth="145.0" promptText="Estado" />
+                  <TextField fx:id="txt_Telefono1" layoutX="280.0" layoutY="60.0" promptText="Modelo" />
+                  <TextField fx:id="txt_Correo1" layoutX="427.0" layoutY="60.0" prefHeight="31.0" prefWidth="141.0" promptText="N cambios" />
+                  <Button fx:id="btn_CrearCliente1" layoutX="400.0" layoutY="434.0" mnemonicParsing="false" onAction="#agregarCliente" prefHeight="31.0" prefWidth="148.0" style="-fx-background-color: #3d8b3d;" text="Crear Vehiculo" textFill="WHITE" />
+                  <Button fx:id="btn_ActualizarCliente1" layoutX="400.0" layoutY="474.0" mnemonicParsing="false" onAction="#actualizarCliente" prefHeight="31.0" prefWidth="149.0" style="-fx-background-color: #3d8b3d;" text="Actualizar Vehiculo" textFill="WHITE" />
+                  <Button fx:id="btn_EliminarCliente1" layoutX="645.0" layoutY="434.0" mnemonicParsing="false" onAction="#eliminarCliente" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3d8b3d;" text="Eliminar Vehiculo" textFill="WHITE" />
+                  <TableView fx:id="tbl_ListClientes1" layoutX="25.0" layoutY="176.0" prefHeight="245.0" prefWidth="1161.0">
+                     <columns>
+                        <TableColumn fx:id="tbc_CedulaCliente1" prefWidth="86.0" text="Marca" />
+                        <TableColumn fx:id="tbc_NombreCliente1" prefWidth="101.0" text="Placa" />
+                        <TableColumn fx:id="tbc_TelefonoCliente1" prefWidth="107.0" text="Estado" />
+                        <TableColumn fx:id="tbc_CorreoCliente1" prefWidth="98.0" text="Modelo" />
+                        <TableColumn prefWidth="97.0" text="N cambios" />
+                        <TableColumn prefWidth="139.0" text="Velocidad maxima" />
+                        <TableColumn prefWidth="97.0" text="Cilindraje" />
+                        <TableColumn prefWidth="159.0" text="Tipo de combustible" />
+                        <TableColumn prefWidth="152.0" text="Tipo de transmision" />
+                        <TableColumn prefWidth="124.0" text="Revision tecnica" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btn_LimpiarClientes1" layoutX="645.0" layoutY="474.0" mnemonicParsing="false" onAction="#LimpiarClientes" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #3d8b3d;" text="Limpiar" textFill="WHITE" />
+                  <TextField layoutX="20.0" layoutY="91.0" prefHeight="31.0" prefWidth="120.0" promptText="Cilindraje" />
+                  <TextField layoutX="126.0" layoutY="91.0" prefHeight="31.0" prefWidth="157.0" promptText="Tipo de combustible" />
+                  <TextField layoutX="280.0" layoutY="91.0" prefHeight="31.0" prefWidth="148.0" promptText="Tipo de transmision" />
+                  <TextField layoutX="427.0" layoutY="91.0" prefHeight="31.0" prefWidth="141.0" promptText="Marca" />
+                  <TextField layoutX="568.0" layoutY="60.0" prefHeight="31.0" prefWidth="166.0" promptText="Velocidad maxima" />
+                  <TextField layoutX="568.0" layoutY="91.0" prefHeight="31.0" prefWidth="168.0" promptText="Revision tecnica" />
+                  <ImageView fitHeight="145.0" fitWidth="148.0" layoutX="1021.0" layoutY="10.0">
+                     <image>
+                        <Image url="@../../../../../../../../../../Downloads/uniq.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Empleados">
+         <content>
+            <AnchorPane>
+               <children>
+                  <Label layoutX="20.0" layoutY="20.0" text="Gestión de empleados">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_Cedula2" layoutX="40.0" layoutY="60.0" prefHeight="31.0" prefWidth="108.0" promptText="ID empleado" />
+                  <TextField fx:id="txt_Nombre2" layoutX="148.0" layoutY="60.0" prefHeight="31.0" prefWidth="109.0" promptText="Nombre " />
+                  <TextField fx:id="txt_Telefono2" layoutX="257.0" layoutY="60.0" prefHeight="31.0" prefWidth="121.0" promptText="Apellido" />
+                  <TextField fx:id="txt_Correo2" layoutX="378.0" layoutY="60.0" prefHeight="31.0" prefWidth="127.0" promptText="Telefono" />
+                  <Button fx:id="btn_CrearCliente2" layoutX="410.0" layoutY="107.0" mnemonicParsing="false" onAction="#agregarCliente" style="-fx-background-color: #3d8b3d;" text="Crear Empleado" textFill="WHITE" />
+                  <Button fx:id="btn_ActualizarCliente2" layoutX="651.0" layoutY="107.0" mnemonicParsing="false" onAction="#actualizarCliente" style="-fx-background-color: #3d8b3d;" text="Actualizar Empleado" textFill="WHITE" />
+                  <Button fx:id="btn_EliminarCliente2" layoutX="714.0" layoutY="465.0" mnemonicParsing="false" onAction="#eliminarCliente" prefHeight="31.0" prefWidth="140.0" style="-fx-background-color: #3d8b3d;" text="Eliminar Vehiculo" textFill="#fcf9f9" />
+                  <TableView fx:id="tbl_ListClientes2" layoutX="244.0" layoutY="155.0" prefHeight="270.0" prefWidth="700.0">
+                     <columns>
+                        <TableColumn fx:id="tbc_CedulaCliente2" prefWidth="104.0" text="Id empleado" />
+                        <TableColumn fx:id="tbc_NombreCliente2" prefWidth="107.0" text="Nombre" />
+                        <TableColumn fx:id="tbc_TelefonoCliente2" prefWidth="113.0" text="Apellido" />
+                        <TableColumn fx:id="tbc_CorreoCliente2" prefWidth="93.0" text="Telefono" />
+                        <TableColumn prefWidth="81.0" text="Correo" />
+                        <TableColumn minWidth="0.0" prefWidth="95.0" text="Dirección" />
+                        <TableColumn prefWidth="106.0" text="Salario" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btn_LimpiarClientes2" layoutX="358.0" layoutY="465.0" mnemonicParsing="false" onAction="#LimpiarClientes" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #3d8b3d;" text="Limpiar" textFill="WHITE" />
+                  <TextField layoutX="635.0" layoutY="60.0" prefHeight="31.0" prefWidth="125.0" promptText="Direccion" />
+                  <TextField layoutX="505.0" layoutY="60.0" prefHeight="31.0" prefWidth="130.0" promptText="Correo" />
+                  <TextField layoutX="760.0" layoutY="60.0" prefHeight="31.0" prefWidth="106.0" promptText="Salario" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="980.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="153.0" fitWidth="126.0" layoutX="1017.0" layoutY="46.0">
+                     <image>
+                        <Image url="@../../../../../../../../../../Downloads/uniq.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+    </tabs>
+</TabPane>

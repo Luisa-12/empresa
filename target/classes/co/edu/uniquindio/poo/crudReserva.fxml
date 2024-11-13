@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="307.0" layoutY="20.0" text="RESERVA">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="87.0" text="Fecha Inicio">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="139.0" text="Fecha Fin">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="194.0" text="Seleccionar Cliente">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="250.0" text="Seleccionar Vehiculo">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="50.0" layoutY="85.0" prefHeight="31.0" prefWidth="236.0" />
+      <DatePicker layoutX="50.0" layoutY="137.0" prefHeight="31.0" prefWidth="236.0" />
+      <ChoiceBox layoutX="50.0" layoutY="192.0" prefHeight="31.0" prefWidth="236.0" />
+      <ChoiceBox layoutX="50.0" layoutY="248.0" prefHeight="31.0" prefWidth="236.0" />
+      <TableView layoutX="18.0" layoutY="344.0" prefHeight="224.0" prefWidth="682.0">
+        <columns>
+          <TableColumn prefWidth="110.0" text="Fecha Reserva" />
+          <TableColumn prefWidth="99.0" text="Cedula" />
+            <TableColumn prefWidth="100.0" text="Nombre" />
+            <TableColumn prefWidth="95.0" text="Telefono" />
+            <TableColumn minWidth="3.0" prefWidth="81.0" text="Vehiculo" />
+            <TableColumn prefWidth="86.0" text="Placa" />
+            <TableColumn prefWidth="114.0" text="Valor Reserva" />
+        </columns>
+      </TableView>
+      <Button layoutX="50.0" layoutY="295.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="75.0" text="Crear" />
+      <Button layoutX="152.0" layoutY="295.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="75.0" text="Eliminar" />
+      <Button layoutX="253.0" layoutY="295.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="94.0" text="Actualizar" />
+      <Button layoutX="368.0" layoutY="295.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="94.0" text="Calcular" />
+      <ImageView fitHeight="224.0" fitWidth="253.0" layoutX="475.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logoo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
